@@ -5,9 +5,12 @@
     <title>$Title$</title>
 </head>
 <body>
-<p> Show me the money</p>
-<p th:text="${car.getMark()}"></p>
-<p th:text="${car.getModel()}"></p>
+
+<tr th:each="car: ${cars}">
+    <td th:text="${car.getMark()}"/>
+    <td th:text="${car.getModel()}"/><br>
+    <p>---------------------------------</p>
+</tr>
 
 </body>
 </html>
