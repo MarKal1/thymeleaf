@@ -19,8 +19,8 @@ public class CarController {
        Car car2 = new Car ("Toyota", "Avensis");
        Car car3 = new Car ("Suzuki", "Swift");
        Car car4 = new Car ("Dacia", "Duster");
-       List<Car> car = Arrays.asList(car1,car2,car3,car4);
-       model.addAttribute("cars", car);
+       List<Car> cars = Arrays.asList(car1, car2, car3, car4);
+       model.addAttribute("cars", cars);
         return "index";
     }
 }
