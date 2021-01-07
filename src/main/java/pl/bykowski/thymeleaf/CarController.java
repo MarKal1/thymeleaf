@@ -20,7 +20,12 @@ public class CarController {
     Car car2 = new Car("Toyota", "Avensis");
     Car car3 = new Car("Suzuki", "Swift");
     Car car4 = new Car("Dacia", "Duster");
-    List<Car> cars = Arrays.asList(car1, car2, car3, car4);
+    cars = new ArrayList<>();
+    cars.add(car1);
+        cars.add(car2);
+        cars.add(car3);
+        cars.add(car4);
+
 }
 
     @GetMapping("/car")
@@ -32,7 +37,7 @@ public class CarController {
 
     @PostMapping("/add-car")
     public String addCar(@ModelAttribute Car car){
-        System.out.println(car);
+        cars.add(car);
         return"redirect:/car";
     }
 
