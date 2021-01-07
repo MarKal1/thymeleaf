@@ -25,7 +25,6 @@ public class CarController {
         cars.add(car2);
         cars.add(car3);
         cars.add(car4);
-
 }
 
     @GetMapping("/car")
@@ -40,5 +39,4 @@ public class CarController {
         cars.add(car);
         return"redirect:/car";
     }
-
 }
