@@ -6,18 +6,16 @@
 </head>
 <body>
 
---car is just an object whiles cars is the array list it is using.--
-
 <tr th:each="car: ${cars}">
     <td th:text="${car.getMark()}"></td><br>
     <td th:text="${car.getModel()}"></td><br>
     <p>---------------------------------</p>
 </tr>
 
-<form>
-    <p> Model:<input type="text"></p>
-    <p> Mark:<input type="text"></p>
-<p> <input type="submit" value="add new car"> </p>
+<form th:action="@{/add-car}" th:object="${newCar}" method="post">
+    <p> Model:<input type="text" th:field="*{model}"></p>
+    <p> Mark:<input type="text" th:field="*{mark}"></p>
+    <p> <input type="submit" value="add new car"> </p>
 
 </form>
 
